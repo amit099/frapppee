@@ -1,0 +1,18 @@
+[2022-10-12 18:12:06 +0530] [13692] [INFO] Starting gunicorn 20.1.0
+[2022-10-12 18:12:06 +0530] [13692] [INFO] Listening at: http://127.0.0.1:8000 (13692)
+[2022-10-12 18:12:06 +0530] [13692] [INFO] Using worker: sync
+[2022-10-12 18:12:06 +0530] [13746] [INFO] Booting worker with pid: 13746
+[2022-10-12 18:12:06 +0530] [13747] [INFO] Booting worker with pid: 13747
+[2022-10-12 18:12:06 +0530] [13748] [INFO] Booting worker with pid: 13748
+/home/frappe/frappe-bench/apps/frappe/frappe/database/query.py:197: UserWarning: The 'filters_config' hook used to add custom operators is not yet implemented in frappe.db.query engine. Use db_query (frappe.get_list) instead.
+  warn(
+/home/frappe/frappe-bench/apps/frappe/frappe/database/query.py:197: UserWarning: The 'filters_config' hook used to add custom operators is not yet implemented in frappe.db.query engine. Use db_query (frappe.get_list) instead.
+  warn(
+/home/frappe/frappe-bench/apps/frappe/frappe/database/query.py:197: UserWarning: The 'filters_config' hook used to add custom operators is not yet implemented in frappe.db.query engine. Use db_query (frappe.get_list) instead.
+  warn(
+/home/frappe/frappe-bench/apps/frappe/frappe/database/query.py:197: UserWarning: The 'filters_config' hook used to add custom operators is not yet implemented in frappe.db.query engine. Use db_query (frappe.get_list) instead.
+  warn(
+/home/frappe/frappe-bench/apps/frappe/frappe/database/query.py:197: UserWarning: The 'filters_config' hook used to add custom operators is not yet implemented in frappe.db.query engine. Use db_query (frappe.get_list) instead.
+  warn(
+/home/frappe/frappe-bench/apps/frappe/frappe/database/query.py:197: UserWarning: The 'filters_config' hook used to add custom operators is not yet implemented in frappe.db.query engine. Use db_query (frappe.get_list) instead.
+  warn(

@@ -1,0 +1,71 @@
+2022-10-12 17:56:57,228 DEBUG cd frappe-bench && python3 -m venv env
+2022-10-12 17:57:01,103 DEBUG cd frappe-bench && /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2022-10-12 17:57:04,681 LOG Getting frappe
+2022-10-12 17:57:04,681 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-14 --depth 1 --origin upstream
+2022-10-12 17:57:08,727 LOG Installing frappe
+2022-10-12 17:57:08,728 DEBUG cd /home/frappe/frappe-bench && /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/frappe-bench/apps/frappe 
+2022-10-12 17:58:11,963 DEBUG cd /home/frappe/frappe-bench/apps/frappe && yarn install
+2022-10-12 17:58:49,582 DEBUG cd frappe-bench && bench build
+2022-10-12 17:58:50,197 INFO /usr/local/bin/bench build
+2022-10-12 18:03:19,930 LOG setting up backups
+2022-10-12 18:03:19,959 LOG backups were set up
+2022-10-12 18:03:19,960 INFO Bench frappe-bench initialized
+2022-10-12 18:03:56,366 INFO /usr/local/bin/bench new-site site1.local
+2022-10-12 18:05:24,551 INFO /usr/local/bin/bench get-app payments
+2022-10-12 18:05:25,015 LOG Getting payments
+2022-10-12 18:05:25,016 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2022-10-12 18:05:26,390 LOG Installing payments
+2022-10-12 18:05:26,537 DEBUG cd /home/frappe/frappe-bench && /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/frappe-bench/apps/payments 
+2022-10-12 18:05:30,532 DEBUG bench build --app payments
+2022-10-12 18:05:30,653 INFO /usr/local/bin/bench build --app payments
+2022-10-12 18:05:42,378 INFO /usr/local/bin/bench get-app --branch version-14 erpnext
+2022-10-12 18:05:42,841 LOG Getting erpnext
+2022-10-12 18:05:42,841 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-14 --depth 1 --origin upstream
+2022-10-12 18:05:47,518 LOG Installing erpnext
+2022-10-12 18:05:47,661 DEBUG cd /home/frappe/frappe-bench && /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/frappe-bench/apps/erpnext 
+2022-10-12 18:06:20,189 DEBUG cd /home/frappe/frappe-bench/apps/erpnext && yarn install
+2022-10-12 18:06:21,947 DEBUG bench build --app erpnext
+2022-10-12 18:06:22,065 INFO /usr/local/bin/bench build --app erpnext
+2022-10-12 18:06:35,058 INFO /usr/local/bin/bench get-app hrms
+2022-10-12 18:06:35,530 LOG Getting hrms
+2022-10-12 18:06:35,531 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2022-10-12 18:06:37,135 LOG Installing hrms
+2022-10-12 18:06:37,311 DEBUG cd /home/frappe/frappe-bench && /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/frappe-bench/apps/hrms 
+2022-10-12 18:06:40,098 DEBUG bench build --app hrms
+2022-10-12 18:06:40,216 INFO /usr/local/bin/bench build --app hrms
+2022-10-12 18:06:47,828 INFO /usr/local/bin/bench get-app ecommerce_integrations --branch main
+2022-10-12 18:06:48,278 LOG Getting ecommerce_integrations
+2022-10-12 18:06:48,279 DEBUG cd ./apps && git clone https://github.com/frappe/ecommerce_integrations.git --branch main --depth 1 --origin upstream
+2022-10-12 18:06:49,204 LOG Installing ecommerce_integrations
+2022-10-12 18:06:49,383 DEBUG cd /home/frappe/frappe-bench && /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/frappe-bench/apps/ecommerce_integrations 
+2022-10-12 18:06:55,941 DEBUG bench build --app ecommerce_integrations
+2022-10-12 18:06:56,061 INFO /usr/local/bin/bench build --app ecommerce_integrations
+2022-10-12 18:07:04,325 INFO /usr/local/bin/bench --site site1.local install-app erpnext
+2022-10-12 18:08:37,382 INFO /usr/local/bin/bench --site site1.local install-app hrms
+2022-10-12 18:09:10,816 INFO /usr/local/bin/bench --site site1.local install-app ecommerce_integrations
+2022-10-12 18:09:20,242 INFO /usr/local/bin/bench --site site1.local enable-scheduler
+2022-10-12 18:09:28,386 INFO /usr/local/bin/bench --site site1.local set-maintenance-mode off
+2022-10-12 18:09:41,161 INFO /usr/local/bin/bench setup production frappe
+2022-10-12 18:09:41,171 DEBUG sudo /usr/bin/python3 -m pip install ansible
+2022-10-12 18:10:12,492 DEBUG bench setup role fail2ban
+2022-10-12 18:10:12,986 INFO /usr/local/bin/bench setup role fail2ban
+2022-10-12 18:10:32,654 DEBUG bench setup role nginx
+2022-10-12 18:10:32,821 INFO /usr/local/bin/bench setup role nginx
+2022-10-12 18:10:48,944 DEBUG bench setup role supervisor
+2022-10-12 18:10:49,062 INFO /usr/local/bin/bench setup role supervisor
+2022-10-12 18:10:59,888 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2022-10-12 18:10:59,888 LOG Updated supervisord.conf: 'chown' changed from '' to 'frappe:frappe'
+2022-10-12 18:10:59,979 DEBUG sudo /usr/sbin/nginx -t
+2022-10-12 18:11:00,045 DEBUG sudo systemctl reload nginx
+2022-10-12 18:11:36,049 INFO /usr/local/bin/bench setup nginx
+2022-10-12 18:11:57,513 INFO /usr/local/bin/bench setup production frappe
+2022-10-12 18:11:57,523 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2022-10-12 18:11:57,523 LOG Updated supervisord.conf: 'chown' changed from '' to 'frappe:frappe'
+2022-10-12 18:12:00,904 DEBUG /usr/bin/supervisorctl reread
+2022-10-12 18:12:01,152 DEBUG /usr/bin/supervisorctl update
+2022-10-12 18:12:01,461 DEBUG sudo /usr/sbin/nginx -t
+2022-10-12 18:12:01,491 DEBUG sudo systemctl reload nginx
+2022-10-12 18:12:02,549 INFO /usr/local/bin/bench worker --queue default
+2022-10-12 18:12:02,557 INFO /usr/local/bin/bench schedule
+2022-10-12 18:12:02,562 INFO /usr/local/bin/bench worker --queue short
+2022-10-12 18:12:02,571 INFO /usr/local/bin/bench worker --queue long

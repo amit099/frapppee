@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["frappe-html:/home/frappe/frappe-bench/apps/hrms/hrms/public/js/templates/employees_to_mark_attendance.html"],
+  "sourcesContent": ["\n\tfrappe.templates['employees_to_mark_attendance'] = `{% if data %}\n<div class=\"col-md-12 col-xs-12\" align=\"center\">\n\t<div class=\"col-md-12 col-xs-12\" style=\"padding-bottom:15px;\">\n\t\t<b>Employees to mark attendance</b>\n\t</div>\n\t{% for item in data %}\n\t<div class=\"col-md-4 col-xs-6\" style=\"padding-bottom:10px;\">\n\t\t{{ item.employee }} &nbsp;&nbsp; {{ item.employee_name }}\n\t</div>\n\t{% } %}\n</div>\n{% } else { %}\n<div></div>\n{% } %}\n`;\n"],
+  "mappings": "MACC,OAAO,UAAU,6BAAkC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;",
+  "names": []
+}
